@@ -270,17 +270,10 @@
         font-style: italic;
     }
     
-    .category_left_mid a img { /* sidebar category nav buttons */
-        border: 1px solid #ed7070;
-        width: 30%;
-        margin-right: 3.5%;
-        margin-bottom: 3.5%;
-        float: left;
-    }
-
-    .category_right a img { /* sidebar category nav buttons */
-        border: 1px solid #ed7070;
-        width: 30%;
+    .category a img { /* sidebar category nav buttons */
+        border: none;
+        width: 50%;
+        margin-bottom: 5%;
         float: left;
     }
     
@@ -433,19 +426,12 @@
 <aside id="sidebar">
     <nav id="main_nav">
         <ul>
-            <!-- MAKE category -->
-            <li><div class="category_left_mid"><a href="/tagged/make"><img src="https://farm3.staticflickr.com/2907/14628636826_7ba0c78297_o.png"></a></div></li>
-            <!-- GROW category -->
-            <li><div class="category_left_mid"><a href="/tagged/grow"><img src="https://farm3.staticflickr.com/2934/14671925183_71c307abeb_o.png"></a></div></li>
-            <!-- INSPIRE category -->
-            <li><div class="category_right"><a href="/tagged/inspire"><img src="https://farm6.staticflickr.com/5037/14465339650_3f9ae47057_o.png"></a></div></li>
-            
-            <!-- LIVE category -->
-            <li><div class="category_left_mid"><a href="/tagged/live"><img src="https://farm3.staticflickr.com/2903/14465385359_916e0a8d0e_o.png"></a></div></li>
-            <!-- EAT category -->
-            <li><div class="category_left_mid"><a href="/tagged/eat"><img src="https://farm6.staticflickr.com/5569/14652005145_900cbb03f4_o.png"></a></div></li>
-            <!-- rose image -->
-            <li><div class="category_right"><a href="/random"><img src="https://farm4.staticflickr.com/3862/14465448248_02d9d6603d_o.png"></a></div> </li>
+            <!-- MAKE + GROW category -->
+            <li><div class="category"><a href="/tagged/make"><img src="https://farm6.staticflickr.com/5566/14833185454_a8026a570b_o.jpg"></a> <a href="/tagged/grow"><img src="https://farm6.staticflickr.com/5553/14648925738_2d5834d6cb_o.jpg"></a></div></li>
+            <!-- TRAVEL + INSPIRE category -->
+            <li><div class="category"><a href="/tagged/travel"><img src="https://farm6.staticflickr.com/5595/14832478201_9330da615e_o.jpg"></a> <a href="/tagged/inspire"><img src="https://farm4.staticflickr.com/3880/14648903829_895a895af4_o.jpg"></a></div> </li>
+            <!-- LIVE  + EAT category -->
+            <li><div class="category"><a href="/tagged/live"><img src="https://farm6.staticflickr.com/5560/14649013287_a221f9422b_o.jpg"></a> <a href="/tagged/eat"><img src="https://farm4.staticflickr.com/3858/14648838060_a2a20d5b9f_o.jpg"></a></div></li>
             
             <li><div class="item"><form action="/search" method="get"><input type="text" name="q" value="{SearchQuery}" placeholder="{lang:Search}"/></form></div></li>
                         
