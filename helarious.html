@@ -202,7 +202,7 @@
         text-decoration: underline;
     }
     
-    #content h2 {
+    #content h2, h3 {
         padding: 2% 0%;
     }
     
@@ -216,7 +216,7 @@
     }
     
     #content article ul li {
-        padding: 1% 0%;
+        padding: 1% 0% 3% 0%;
     }
     
     article .inner { /*ensures post content stays withing post */
@@ -254,8 +254,8 @@
     
     #sidebar {
         float: right;
-        margin: 2% 22% 5% 0%;
-        width: 12%;
+        margin: 2% 19% 5% 0%;
+        width: 15%;
     }
     
     .sideitem {
@@ -270,22 +270,28 @@
         font-style: italic;
     }
     
-    .category a img { /* sidebar category nav buttons */
-        border: none;
-        width: 50%;
-        margin-bottom: 5%;
-        float: left;
-    }
-    
-    .shop, .headheart .newsletter, .sponsor, .thirty, .instagram a img {
+    .shop, .quicklinks, .callout, .categories, .newsletter, .sponsor, .instagram a img {
         margin-top: 6%;
     }
     
     .newsletter {
+        font-size: 11px;
+        font-weight: normal;
+        border: 1px solid #d1d1d1;
+        padding: 4%;
+    }
+    
+    .categories {
         font-size: 13px;
         font-weight: normal;
         border: 1px solid #d1d1d1;
         padding: 4%;
+
+    }
+    
+    .categories a {
+        color: #9ad7b9;
+        text-align: center;
     }
     
     /* adds rounded corners to articles and sidebar items */
@@ -297,10 +303,16 @@
     .item form input {
         border: none;
         border: 1px solid #d1d1d1;
-        padding: 2% 1%;
-        width: 96%;
+        padding: 2% 3%;
+        width: 93%;
+        height: 13px;
         margin: 3% 0%;
     }
+    
+    /* text styling of search bar */
+    input[type="text"] {
+        font-size:11px;
+}
     
     /* footer of the entire blog */
     #end {
@@ -401,7 +413,7 @@
     <nav id="top_nav">
         <ul>
             <li><div class="menu"><a href="/about">About</a></div></li>
-            <li><div class="menu"><a href="http://limetreebower.com">Shop</a></div></li>
+            <li><div class="menu"><a href="http://limetreebower.com" onClick="_gaq.push(['_trackEvent', 'LTB', 'Click', 'LTBtop']);">Shop</a></div></li>
             <!--<li><div class="menu"><a href="/press">Press</a></div></li> -->
             <li><div class="menu"><a href="/sponsor">Sponsor</a></div></li>
             <li><div class="menu"><a href="/contact">Contact</a></div></li>
@@ -409,7 +421,6 @@
             <li><div class="social"><a href="http://instagram.com/helarious" target=_blank class="social"><img src="https://farm4.staticflickr.com/3910/14474080509_c74f84809f_o.png" alt="helarious instagram"></a></div></li>
             <li><div class="social"><a href="https://www.facebook.com/helariousblog" target=_blank class="social"><img src="https://farm4.staticflickr.com/3841/14657500521_86e2ab4d19_o.png" alt="helarious facebook"></a></div></li>
             <li><div class="social"><a href="http://www.pinterest.com/helarious/" target=_blank class="social"><img src="https://farm3.staticflickr.com/2898/14660353572_dbe50c2333_o.png" alt="helarious pinterest"></a></div></li>
-            <li><div class="social"><a href="http://www.bloglovin.com/blog/3712666" target=_blank class="social"><img src="https://farm3.staticflickr.com/2916/14637742066_3468cd3c26_o.png" alt="helarious bloglovin"></a></div></li>
         </ul>
     </nav>
 </header>
@@ -428,20 +439,39 @@
 <aside id="sidebar">
     <nav id="main_nav">
         <ul>
-            <!-- MAKE + GROW category -->
-            <li><div class="category"><a href="/tagged/make"><img src="https://farm6.staticflickr.com/5566/14833185454_a8026a570b_o.jpg"></a> <a href="/tagged/grow"><img src="https://farm6.staticflickr.com/5553/14648925738_2d5834d6cb_o.jpg"></a></div></li>
-            <!-- TRAVEL + INSPIRE category -->
-            <li><div class="category"><a href="/tagged/travel"><img src="https://farm6.staticflickr.com/5595/14832478201_9330da615e_o.jpg"></a> <a href="/tagged/inspire"><img src="https://farm4.staticflickr.com/3880/14648903829_895a895af4_o.jpg"></a></div> </li>
-            <!-- LIVE  + EAT category -->
-            <li><div class="category"><a href="/tagged/live"><img src="https://farm6.staticflickr.com/5560/14649013287_a221f9422b_o.jpg"></a> <a href="/tagged/eat"><img src="https://farm4.staticflickr.com/3858/14648838060_a2a20d5b9f_o.jpg"></a></div></li>
+                <li><div class="item"><form action="/search" method="get"><input type="text" name="q" value="{SearchQuery}" placeholder="type to search..."/></form></div></li>
+                            
+                <li><div class="categories">
+                <p>Categories</p>
+                <p><a href="/tagged/event">Events & Styling</a><br>
+                <a href="/tagged/floraging">Floraging</a><br>
+                <a href="/tagged/flower-crown">Flower Crowns</a><br>
+                <a href="/tagged/garden">Garden</a><br>
+                <a href="/tagged/head-and-heart">Head & Heart</a><br>
+                <a href="/tagged/life">Life</a><br>
+                <a href="/tagged/lime-tree-bower">Lime Tree Bower</a><br>
+                <a href="/tagged/micro-macro">Micro / Macro</a><br>
+                <a href="/tagged/table-floral-arrangement">Table Arrangements</a><br>
+                <a href="/tagged/travel">Travel</a></p>
+                </div></li>
+
+
+            <li><div class="callout">
+            <a href="http://helario.us/head-and-heart"><img src="https://farm3.staticflickr.com/2945/15492060401_81530228b8_o.png"></a>
+            </div></li>
             
-            <li><div class="item"><form action="/search" method="get"><input type="text" name="q" value="{SearchQuery}" placeholder="{lang:Search}"/></form></div></li>
-                        
-            <li><div class="newsletter">Exclusive content, curated finds & popular posts delivered to you bi-monthly!
+            
+            <li><div class="shop"><a href="http://www.limetreebower.com" onClick="_gaq.push(['_trackEvent', 'LTB', 'Click', 'LTBsidebar']);"><img src="https://farm6.staticflickr.com/5560/14945349292_f85848bd1c_o.jpg"></a></div></li>
+
+
+            <li><div class="instagram"><a href="http://instagram.com/helarious/"><img src="https://farm4.staticflickr.com/3898/14942815741_32faca5f94_o.png"></a></div></li>
+            
+            
+            <li><div class="newsletter">You love mail.<br>So don't miss out on my sporadic love letters to you, dear reader. (I promise: never spam, but maybe ham?)
                 <form accept-charset="UTF-8" action="https://www.sendicate.net/subscribe/akfklb" method="post" style="text-align: center;">
-                <input id="subscriber_email" name="subscriber[email]" type="text" placeholder="Enter your email" class="newsletter" style="height: 22px; width: 90%; padding: 5px; text-align: center;" />
-                <div style="margin-top: 5px; text-align: center;">
-                <input name="commit" type="submit" onclick="validate()" value="Subscribe" style="border: 0px; background-color: #9ad7b9; color: #FFFFFF; text-align: center; width: 100%;" align="center" /></div>
+                <input id="subscriber_email" name="subscriber[email]" type="text" placeholder="enter your email" class="newsletter" style="height: 13px; width: 90%; padding: 5px; text-align: left;" />
+                <div style="margin-top: 5px; text-align: right;">
+                <input name="commit" type="submit" onclick="validate()" value="Hell yes!" style="border: 0px; background-color: #9ad7b9; color: #FFFFFF; text-align: center; width: 45%;" /></div>
                 </form>
                 
     <script type="text/javascript">
@@ -479,10 +509,7 @@
                 </div>
             </div></li>
             
-            <li><div class="shop"><a href="http://www.limetreebower.com"><img src="https://farm6.staticflickr.com/5560/14945349292_f85848bd1c_o.jpg"></a></div></li>
             
-            <li><div class="headheart"><a href="http://helario.us/head-and-heart"><img src="https://farm6.staticflickr.com/5555/14759361647_db8e19b327_o.jpg"></a></div></li>
-                        
             <li><!-- BEGIN nuffnang ad -->
                 <div class="nuffnang">
                     <div style="padding-top:15px; padding-bottom:10px;">
@@ -502,13 +529,10 @@
             
             <li><div class=""><a href="http://feeds.feedburner.com/helarious" target=_blank><img src="" alt="helarious rss"></a></div></li> -->
             
-            <li><div class="sponsor"><a href="http://click.linksynergy.com/fs-bin/click?id=YnUdJHIRuUU&offerid=335040.7&subid=0&type=4"><IMG border="0"   alt="TOMS One for One:  With Every Product that you Purchase, TOMS will Help a Person in Need.  One for One.  Learn More at TOMS.com" src="http://ad.linksynergy.com/fs-bin/show?id=YnUdJHIRuUU&bids=335040.7&subid=0&type=4&gridnum=14"></a></div></li>
+            <!-- <li><div class="sponsor"><a href="http://click.linksynergy.com/fs-bin/click?id=YnUdJHIRuUU&offerid=335040.7&subid=0&type=4"><IMG border="0"   alt="TOMS One for One:  With Every Product that you Purchase, TOMS will Help a Person in Need.  One for One.  Learn More at TOMS.com" src="http://ad.linksynergy.com/fs-bin/show?id=YnUdJHIRuUU&bids=335040.7&subid=0&type=4&gridnum=14"></a></div></li> -->
+    
             
-            <li><div class="instagram"><a href="http://instagram.com/helarious/"><img src="https://farm4.staticflickr.com/3898/14942815741_32faca5f94_o.png"></a></div></li>
-            
-            <li><div class="thirty"><a href="http://helario.us/post/88268811546/30-before-30/"><img src="https://farm6.staticflickr.com/5555/14759243500_8a82f4c39f_o.png"></a></div></li>
-            
-            <li><div class="credit"><a href="http://helario.us/disclaimer">Give credit where credit is due please!</a></div></li>
+            <li><div class="credit"><a href="http://helario.us/disclaimer">Disclaimer: please credit my work correctly - click for more.</a></div></li>
             
         </ul>
     </nav>
@@ -525,7 +549,12 @@
                     <h2>Search Results</h2>
                 </header>
                 <section>
-                    <p>{SearchQuery} - {SearchResultCount} found{block:NoSearchResults}<br /><em>Sorry, no search results found</em>{/block:NoSearchResults}</p>
+                    <p>
+                    {SearchQuery} - {SearchResultCount} found
+                    {block:NoSearchResults}
+                    <br /><em>Sorry, no search results found</em>
+                    {/block:NoSearchResults}
+                    </p>
                 </section>
             {/block:English}
             {block:NotEnglish}
